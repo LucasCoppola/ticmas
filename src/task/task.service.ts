@@ -68,7 +68,7 @@ export class TaskService {
   modifyStatus(id: string, updateStatusDto: UpdateStatusDto): Task {
     const { status } = updateStatusDto;
     const task = this.findOne(id);
-    task.status = status;
+    task.status = status as Status;
 
     return task;
   }
