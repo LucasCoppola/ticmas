@@ -13,7 +13,7 @@ import { TaskService } from './task.service';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
 import { Status } from './task.types';
-import { TransformInterceptor } from 'src/common/interceptors/transform.interceptor';
+import { TransformInterceptor } from '../common/interceptors/transform.interceptor';
 import { UpdateStatusDto } from './dto/update-status.dto';
 
 @Controller('tasks')
