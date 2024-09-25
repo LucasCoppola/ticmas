@@ -4,5 +4,5 @@ import { Status } from '../task.types';
 export class UpdateStatusDto {
   @IsString()
   @IsNotEmpty()
-  status: Status;
+  status: Omit<Status, 'delete'>;
 }

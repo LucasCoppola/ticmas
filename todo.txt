@@ -26,4 +26,6 @@ operaciones CRUD (Crear, Leer, Actualizar y Borrar) en el recurso “Tareas”.
 
 [] Desarrolla los tests unitarios sobre cada caso de uso.
 
+[] CI
+
 [] Documentación
