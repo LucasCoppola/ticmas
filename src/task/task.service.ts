@@ -26,14 +26,11 @@ export class TaskService {
   }
 
   findAll(): Task[] {
-    console.log(this.tasks);
     return this.tasks.filter((task) => task.status !== 'deleted');
   }
 
   filterByStatus(status: Status): Task[] {
-    return this.tasks.filter(
-      (task) => task.status === status && task.status !== 'deleted',
-    );
+    return this.tasks.filter((task) => task.status === status);
   }
 
   findOne(id: string): Task {
@@ -50,10 +47,16 @@ export class TaskService {
 
   update(id: string, updateTaskDto: UpdateTaskDto): Task {
     const { title, description } = updateTaskDto;
+
     const task = this.findOne(id);
 
-    task.title = title;
-    task.description = description;
+    if (title) {
+      task.title = title;
+    }
+
+    if (description) {
+      task.description = description;
+    }
 
     return task;
   }
@@ -78,7 +81,7 @@ export class TaskService {
     const today = new Date();
 
     const diffTime = Math.abs(today.getTime() - task.created_at.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
     return { id: task.id, days: diffDays };
   }

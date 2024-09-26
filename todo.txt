@@ -24,8 +24,8 @@ operaciones CRUD (Crear, Leer, Actualizar y Borrar) en el recurso “Tareas”.
   Puedes agregar una nueva ruta, por ejemplo, `/tareas/:id/dias-transcurridos`, que devuelva el número de días transcurridos 
   desde la creación de la tarea con el ID proporcionado.
 
-[] Desarrolla los tests unitarios sobre cada caso de uso.
+[x] Desarrolla los tests unitarios sobre cada caso de uso.
 
-[] CI
+[x] CI
 
-[] Documentación
+[x] Documentación
