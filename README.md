@@ -28,7 +28,7 @@ All endpoints are prefixed with `/api/tasks`.
 - **Endpoint**: `/api/tasks`
 - **Description**: Retrieves all tasks that are not deleted
 - **Query Parameters**:
-  - `status` (optional): Filter tasks by status ('pending', 'in_progress', 'completed')
+  - `status` (optional): Filter tasks by status ('pending', 'in_progress', 'completed', 'deleted')
 - **Response**: Returns an array of task objects
 
 #### 3. Get a Specific Task
@@ -88,13 +88,13 @@ All endpoints are prefixed with `/api/tasks`.
 
 ### Response Format
 
-All endpoints return responses in the following format:
+- All endpoints return responses in the following format:
 
-    ```json
-    {
-      "statusCode": number,
-      "data": object | array
-    }
-    ```
+  ```json
+  {
+    "statusCode": number,
+    "data": object | array
+  }
+  ```
 
 The `statusCode` field contains the HTTP status code of the response, and the `data` field contains the actual response data.
